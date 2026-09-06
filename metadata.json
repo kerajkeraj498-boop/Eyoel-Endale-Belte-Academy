@@ -1,0 +1,6 @@
+{
+  "name": "Eyoel Endale Belete",
+  "description": "Educational platform by Eyoel Endale Belete for Grade 9–12 students featuring Ethiopian secondary curricula, study notes, 20-question exam banks, multi-language support (English, Amharic, Afaan Oromoo), and AI study assistance.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

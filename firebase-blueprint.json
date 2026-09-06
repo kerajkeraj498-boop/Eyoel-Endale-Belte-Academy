@@ -1,0 +1,95 @@
+{
+  "entities": {
+    "User": {
+      "collection": "users",
+      "description": "Student and admin profiles containing academic data, progress, and certificates",
+      "fields": {
+        "id": { "type": "string", "description": "Unique user ID matching Firebase Auth UID" },
+        "name": { "type": "string", "description": "Full name of the student" },
+        "email": { "type": "string", "description": "Email address of the student" },
+        "grade": { "type": "string", "description": "Grade level (Grade 9, Grade 10, Grade 11, Grade 12)" },
+        "stream": { "type": "string", "description": "Academic stream (General, Natural Science, Social Science)" },
+        "role": { "type": "string", "description": "Account role: 'student' or 'admin'" },
+        "avatar": { "type": "string", "description": "Avatar emoji or URL" },
+        "targetScore": { "type": "number", "description": "Target exam score goal (e.g. 580/600)" },
+        "studyStreakDays": { "type": "number", "description": "Consecutive days active" },
+        "joinedDate": { "type": "string", "description": "Date the student joined" },
+        "bio": { "type": "string", "description": "Short bio or study aspiration" },
+        "notesCompleted": { "type": "array", "description": "List of completed note IDs" },
+        "bookmarks": { "type": "array", "description": "List of bookmarked note IDs" },
+        "certificates": { "type": "array", "description": "Earned academic certificates" },
+        "updatedAt": { "type": "string", "description": "Last activity timestamp" }
+      }
+    },
+    "QuizAttempt": {
+      "collection": "quizAttempts",
+      "description": "Student 20-question quiz/exam test results and score history",
+      "fields": {
+        "id": { "type": "string", "description": "Unique attempt ID" },
+        "userId": { "type": "string", "description": "Student Auth UID" },
+        "studentName": { "type": "string", "description": "Student display name" },
+        "studentEmail": { "type": "string", "description": "Student email" },
+        "quizId": { "type": "string", "description": "Reference quiz ID" },
+        "quizTitle": { "type": "string", "description": "Title of the exam" },
+        "subjectName": { "type": "string", "description": "Subject name" },
+        "grade": { "type": "string", "description": "Grade level" },
+        "score": { "type": "number", "description": "Raw correct questions score" },
+        "totalQuestions": { "type": "number", "description": "Total question count (e.g. 20)" },
+        "percentage": { "type": "number", "description": "Score percentage (0-100)" },
+        "timeSpentSeconds": { "type": "number", "description": "Total time taken in seconds" },
+        "date": { "type": "string", "description": "Attempt date string" },
+        "userAnswers": { "type": "array", "description": "Index of options selected for each question" }
+      }
+    },
+    "Subject": {
+      "collection": "subjects",
+      "description": "Grade 9-12 curriculum subjects",
+      "fields": {
+        "id": { "type": "string", "description": "Subject slug / ID" },
+        "name": { "type": "string", "description": "Full Subject Name" },
+        "code": { "type": "string", "description": "Curriculum code" },
+        "icon": { "type": "string", "description": "Icon name" },
+        "color": { "type": "string", "description": "Theme color" },
+        "description": { "type": "string", "description": "Syllabus overview" },
+        "grades": { "type": "array", "description": "Supported grades" },
+        "stream": { "type": "string", "description": "Stream classification" },
+        "unitCount": { "type": "number", "description": "Number of units" },
+        "noteCount": { "type": "number", "description": "Number of available notes" },
+        "quizCount": { "type": "number", "description": "Number of 20-Q quizzes" },
+        "topics": { "type": "array", "description": "List of core syllabus topics" }
+      }
+    },
+    "Note": {
+      "collection": "notes",
+      "description": "Comprehensive academic study notes for Ethiopian secondary school curricula",
+      "fields": {
+        "id": { "type": "string", "description": "Unique note ID" },
+        "subjectId": { "type": "string", "description": "Subject reference ID" },
+        "subjectName": { "type": "string", "description": "Subject Name" },
+        "grade": { "type": "string", "description": "Grade level" },
+        "chapterNumber": { "type": "number", "description": "Chapter number" },
+        "title": { "type": "string", "description": "Chapter title" },
+        "readingTimeMinutes": { "type": "number", "description": "Estimated read duration" },
+        "summary": { "type": "string", "description": "Summary synopsis" },
+        "tableOfContents": { "type": "array", "description": "Sections list" },
+        "keyTerms": { "type": "array", "description": "Definitions list" },
+        "formulas": { "type": "array", "description": "Scientific formulas list" },
+        "content": { "type": "array", "description": "Detailed lesson body sections" }
+      }
+    },
+    "Quiz": {
+      "collection": "quizzes",
+      "description": "20-Question exams with timers, options, answers, hints and explanations",
+      "fields": {
+        "id": { "type": "string", "description": "Unique quiz ID" },
+        "subjectId": { "type": "string", "description": "Subject reference" },
+        "subjectName": { "type": "string", "description": "Subject Name" },
+        "grade": { "type": "string", "description": "Grade level" },
+        "title": { "type": "string", "description": "Exam title" },
+        "durationMinutes": { "type": "number", "description": "Timed duration in minutes" },
+        "difficulty": { "type": "string", "description": "Difficulty tag" },
+        "questions": { "type": "array", "description": "20 full questions with options and explanations" }
+      }
+    }
+  }
+}

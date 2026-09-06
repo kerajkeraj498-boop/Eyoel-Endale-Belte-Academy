@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#18181B" />
+      <stop offset="100%" stop-color="#0A0A0B" />
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E5C378" />
+      <stop offset="50%" stop-color="#C5A059" />
+      <stop offset="100%" stop-color="#8C6D2D" />
+    </linearGradient>
+    <linearGradient id="goldLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#C5A059" />
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="108" fill="url(#bg)" stroke="#C5A059" stroke-width="8" stroke-opacity="0.4"/>
+  <!-- Decorative Ring -->
+  <circle cx="256" cy="256" r="190" fill="none" stroke="url(#gold)" stroke-width="4" stroke-dasharray="8 8" opacity="0.4"/>
+  <!-- Graduation Cap -->
+  <path d="M256 120 L420 200 L256 280 L92 200 Z" fill="url(#gold)" />
+  <!-- Under cap band -->
+  <path d="M150 230 L150 310 Q256 360 362 310 L362 230 Q256 280 150 230 Z" fill="#997733" />
+  <!-- Tassel -->
+  <path d="M380 210 L400 310 L390 310 L370 210 Z" fill="url(#goldLight)" />
+  <circle cx="395" cy="325" r="14" fill="#C5A059" />
+  <!-- Academy Initial / Star -->
+  <polygon points="256,380 268,410 300,412 275,432 283,462 256,444 229,462 237,432 212,412 244,410" fill="url(#gold)" />
+</svg>
